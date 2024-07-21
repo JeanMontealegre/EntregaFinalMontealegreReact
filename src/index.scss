@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+a.active {
+    @apply text-blue-500
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.marquee-container {
+    background-color: #f8f8f8;
+}
+
+.marquee-content {
+    display: flex;
+    width: 200%;
+}
+
+.animate-marquee {
+    animation: marquee 15s linear infinite;
+}
+
+.image-hover-effect {
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.image-hover-effect:hover {
+    transform: scale(1.1);
+    filter: saturate(1.5);
+}
+
